@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["devkit"]
+  "cSpell.words": ["devkit"],
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss"
+  }
 }
