@@ -1,1 +1,14 @@
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
+<router-outlet />
+
+<div class="flex flex-wrap gap-4 p-10">
+  @for (p of products(); track $index) {
+  <div class="flex flex-col p-3 border shadow-md">
+    <p>{{ p.id }} - {{ p.title | slice : 0 : 10 }}</p>
+    <p>{{ p.price }}</p>
+    <p>{{ p.category }}</p>
+    <img class="w-32 object-cover" src="{{ p.image }}" alt="{{ p.title }}" />
+    <p>{{ p.qty }}</p>
+    <p>{{ p.subTotal }}</p>
+  </div>
+  }
+</div>
