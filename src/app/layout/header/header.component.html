@@ -1,1 +1,59 @@
-<p>header works!</p>
+<header class="text-gray-600 body-font w-full">
+  <div
+    class="flex flex-wrap p-5 flex-col md:flex-row items-center md:justify-between bg-emerald-800 text-white"
+  >
+    <!-- Logo -->
+    <a routerLink="/" class="cursor-pointer">
+      <span class="font-bold text-2xl italic">Logo</span>
+    </a>
+
+    <!-- Cart icon -->
+    <a
+      (mouseover)="cartDetailsVisible.set(true)"
+      (mouseleave)="cartDetailsVisible.set(false)"
+      class="relative flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer"
+      routerLink="/checkout"
+    >
+      <svg
+        fill="#000000"
+        version="1.1"
+        id="Capa_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="800px"
+        height="800px"
+        viewBox="0 0 494.67 494.67"
+        xml:space="preserve"
+        class="w-10 h-10 ml-1"
+      >
+        <g>
+          <path
+            d="M421.621,116.048h-56.939v-3.735C364.682,50.383,314.299,0,252.369,0h-9.45c-61.93,0-112.313,50.384-112.313,112.313v3.735
+		H73.049c-8.297,0-15.026,6.727-15.026,15.025v348.572c0,8.299,6.729,15.025,15.026,15.025h348.572
+		c8.299,0,15.025-6.728,15.025-15.025V131.073C436.648,122.774,429.92,116.048,421.621,116.048z M166.073,112.313
+		c0-42.372,34.473-76.846,76.846-76.846h9.45c42.373,0,76.695,34.474,76.695,76.846l-0.021,36.722
+		c0,9.792-7.838,17.729-17.629,17.729c-9.793,0-17.729-7.938-17.729-17.729c0-0.041,0.008-0.082,0.008-0.123l-0.019-32.863h-92.147
+		v32.863h-0.006c0,0.041,0.006,0.082,0.006,0.123c0,9.792-7.938,17.729-17.729,17.729c-9.792,0-17.729-7.938-17.729-17.729
+		L166.073,112.313z"
+          />
+        </g>
+      </svg>
+      <span class="absolute text-white top-4 left-5">8</span>
+
+      <!-- Summary popup -->
+      <div
+        class="opacity-85 absolute top-12 right-1 bg-black text-white p-5 rounded-md min-w-[200px] text-center z-10"
+        id="cart-details"
+      >
+        <div>
+          <ul>
+            <li>3 Item 1</li>
+            <li>3 Item 1</li>
+          </ul>
+        </div>
+        <hr />
+        Total: 123
+      </div>
+    </a>
+  </div>
+</header>

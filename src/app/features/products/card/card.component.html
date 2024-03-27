@@ -1,1 +1,30 @@
-<p>card works!</p>
+<div class="p-4 w-full shadow-sm transition-all hover:shadow-md">
+  <a
+    [routerLink]="['/products', product().id]"
+    class="block relative h-48 rounded overflow-hidden"
+  >
+    <img
+      class="object-contain object-center w-full h-full block transition-all hover:scale-105"
+      src="{{ product().image }}"
+      alt="{{ product().title }}"
+    />
+  </a>
+  <div class="mt-4">
+    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+      {{ product().category }}
+    </h3>
+    <h2 class="text-gray-900 title-font text-lg font-medium">
+      {{ product().title | slice: 0 : 30 }}
+    </h2>
+  </div>
+  <div class="flex items-center justify-between mt-1">
+    <p class="text-2xl font-bold text-orange-500">
+      {{ product().price | currency }}
+    </p>
+    <button
+      class="px-2 py-1 text-white bg-orange-500 rounded hover:bg-orange-700"
+    >
+      Add to cart
+    </button>
+  </div>
+</div>
